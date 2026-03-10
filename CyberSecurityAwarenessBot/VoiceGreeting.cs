@@ -23,4 +23,3 @@ namespace CyberSecurityAwarenessBot
         }
     }
 }
-//Testing GitHub Actions workflow
