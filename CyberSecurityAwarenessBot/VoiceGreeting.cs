@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Media;
+using System.Runtime.InteropServices;
 
 namespace CyberSecurityAwarenessBot
 {
@@ -7,14 +8,17 @@ namespace CyberSecurityAwarenessBot
     {
         public static void PlayGreeting()
         {
-            try
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
-                SoundPlayer player = new SoundPlayer("greeting.wav");
-                player.PlaySync();
-            }
-            catch
-            {
-                Console.WriteLine("Voice greeting file not found.");
+                try
+                {
+                    SoundPlayer player = new SoundPlayer("greeting.wav");
+                    player.PlaySync();
+                }
+                catch
+                {
+                    Console.WriteLine("Voice greeting could not be played.");
+                }
             }
         }
     }
