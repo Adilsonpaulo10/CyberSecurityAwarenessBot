@@ -19,12 +19,12 @@ namespace CyberSecurityAwarenessBot
             Console.Write("\nEnter your name: ");
             Console.ResetColor();
 
-            string userName = Console.ReadLine();
+            string userName = Console.ReadLine() ?? "";
 
             while (string.IsNullOrWhiteSpace(userName))
             {
                 Console.WriteLine("Name cannot be empty. Please enter your name:");
-                userName = Console.ReadLine();
+                userName = Console.ReadLine() ?? "";
             }
 
             Console.Clear();

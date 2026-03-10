@@ -12,7 +12,8 @@ namespace CyberSecurityAwarenessBot
                 Console.Write("\nYou: ");
                 Console.ResetColor();
 
-                string input = Console.ReadLine();
+                string input = Console.ReadLine() ?? "";
+                input = input.ToLower();
 
                 if (string.IsNullOrWhiteSpace(input))
                 {
