@@ -8,30 +8,29 @@ namespace CyberSecurityAwarenessBot
         {
             ConsoleUI.ShowLoading();
 
-            // Play voice greeting
             VoiceGreeting.PlayGreeting();
 
-            // Show ASCII logo
             ConsoleUI.DisplayLogo();
 
-            // Ask for user name
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write("\nEnter your name: ");
+            Console.Write("Enter your name: ");
             Console.ResetColor();
 
             string userName = Console.ReadLine() ?? "";
 
             while (string.IsNullOrWhiteSpace(userName))
             {
-                Console.WriteLine("Name cannot be empty. Please enter your name:");
+                Console.WriteLine("Please enter a valid name:");
                 userName = Console.ReadLine() ?? "";
             }
 
             Console.Clear();
             ConsoleUI.DisplayLogo();
 
-            ConsoleUI.TypeText($"\nHello {userName}! Welcome to the Cybersecurity Awareness Bot.");
-            ConsoleUI.TypeText("I can help you learn about staying safe online.\n");
+            ConsoleUI.TypeText($"Hello {userName}! Welcome to the Cybersecurity Awareness Bot.");
+            ConsoleUI.TypeText("Type 'help' to see what you can ask.\n");
+
+            ConsoleUI.ShowRandomTip();
 
             ChatBot.StartChat();
         }

@@ -16,11 +16,10 @@ namespace CyberSecurityAwarenessBot
             Console.WriteLine(" | |    / _` | '_ \\ / _ \\ '_ \\|  _  // _ \\/ __| ");
             Console.WriteLine(" | |___| (_| | |_) |  __/ | | | | \\ \\  __/\\__ \\ ");
             Console.WriteLine("  \\_____\\__,_|_.__/ \\___|_| |_|_|  \\_\\___||___/ ");
-            Console.WriteLine("                                                ");
             Console.WriteLine("        CYBERSECURITY AWARENESS BOT 🔒         ");
             Console.WriteLine("================================================");
 
-            Console.ResetColor();
+            Console.ResetColor(); 
         }
 
         public static void TypeText(string text)
@@ -30,7 +29,6 @@ namespace CyberSecurityAwarenessBot
                 Console.Write(c);
                 Thread.Sleep(20);
             }
-
             Console.WriteLine();
         }
 
@@ -45,6 +43,24 @@ namespace CyberSecurityAwarenessBot
             }
 
             Console.WriteLine("\n");
+        }
+
+        public static void ShowRandomTip()
+        {
+            string[] tips =
+            {
+                "Tip: Never reuse passwords across multiple websites.",
+                "Tip: Enable two-factor authentication whenever possible.",
+                "Tip: Always check email senders before clicking links.",
+                "Tip: Keep your operating system updated.",
+                "Tip: Avoid entering sensitive information on public WiFi."
+            };
+
+            Random rand = new Random();
+
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine(tips[rand.Next(tips.Length)]);
+            Console.ResetColor();
         }
     }
 }

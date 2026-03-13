@@ -12,7 +12,7 @@ namespace CyberSecurityAwarenessBot
             {
                 try
                 {
-                    SoundPlayer player = new SoundPlayer("greeting.wav");
+                    SoundPlayer player = new SoundPlayer(@"C:\Users\Student\Documents\CyberSecurityChatbot\CyberSecurityAwarenessBot\CyberSecurityAwarenessBot\greeting.wav");
                     player.PlaySync();
                 }
                 catch
@@ -23,3 +23,7 @@ namespace CyberSecurityAwarenessBot
         }
     }
 }
+
+
+
+                   
