@@ -10,14 +10,14 @@ namespace CyberSecurityAwarenessBot
         {
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
-                try
+                try // the wav sound will play
                 {
                     SoundPlayer player = new SoundPlayer(@"C:\Users\Student\Documents\CyberSecurityChatbot\CyberSecurityAwarenessBot\CyberSecurityAwarenessBot\greeting.wav");
                     player.PlaySync();
                 }
                 catch
                 {
-                    Console.WriteLine("Voice greeting could not be played.");
+                    Console.WriteLine("Voice greeting could not be played."); // but if there is an error this message will display
                 }
             }
         }

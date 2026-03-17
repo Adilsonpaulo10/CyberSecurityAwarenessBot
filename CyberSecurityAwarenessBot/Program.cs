@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Security;
 
 namespace CyberSecurityAwarenessBot
 {
@@ -6,33 +7,33 @@ namespace CyberSecurityAwarenessBot
     {
         static void Main(string[] args)
         {
-            ConsoleUI.ShowLoading();
+            ConsoleUI.ShowLoading(); //Call Showloaing method from the consoleUI class
 
-            VoiceGreeting.PlayGreeting();
+            VoiceGreeting.PlayGreeting(); 
 
-            ConsoleUI.DisplayLogo();
+            ConsoleUI.DisplayLogo(); 
 
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write("Enter your name: ");
-            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Yellow; 
+            Console.Write("Enter your name: "); 
+            Console.ResetColor(); 
 
-            string userName = Console.ReadLine() ?? "";
+            string userName = Console.ReadLine() ?? ""; // username will receive the value from the prompt "name"
 
-            while (string.IsNullOrWhiteSpace(userName))
+            while (string.IsNullOrWhiteSpace(userName)) // if the username is null or empty 
             {
-                Console.WriteLine("Please enter a valid name:");
-                userName = Console.ReadLine() ?? "";
+                Console.WriteLine("Please enter a valid name:"); // user will be prompt to enter name again
+                userName = Console.ReadLine() ?? ""; // username will equal prompt name
             }
 
-            Console.Clear();
-            ConsoleUI.DisplayLogo();
+            Console.Clear(); // after the loop the program will clear every output or message
+            ConsoleUI.DisplayLogo(); // the ASCII logo will then display
 
-            ConsoleUI.TypeText($"Hello {userName}! Welcome to the Cybersecurity Awareness Bot.");
-            ConsoleUI.TypeText("Type 'help' to see what you can ask.\n");
+            ConsoleUI.TypeText($"Hello {userName}! Welcome to the Cybersecurity Awareness Bot."); // type text method will then be called, and then it will display a message
+            ConsoleUI.TypeText("Insert a number to learn the terms below\n"); 
 
-            ConsoleUI.ShowRandomTip();
+            ConsoleUI.ShowRandomTip(); // A random tip will display after this method is called
 
-            ChatBot.StartChat();
+            ChatBot.StartChat(); // Then the program starts after this method is called
         }
     }
 }
