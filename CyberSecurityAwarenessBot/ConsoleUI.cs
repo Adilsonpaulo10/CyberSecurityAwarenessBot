@@ -26,7 +26,7 @@ namespace CyberSecurityAwarenessBot
         {
             foreach (char c in text)
             {
-                Console.Write(c); // So this function is an animation where for every character in a sentence is delayed by 20 milliseconds before it displays
+                Console.Write(c); //  is an animation where for every character in a sentence is delayed by 20 milliseconds before it displays
                 Thread.Sleep(20);
             }
             Console.WriteLine();
