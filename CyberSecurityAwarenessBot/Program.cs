@@ -26,7 +26,7 @@ namespace CyberSecurityAwarenessBot
             }
 
             Console.Clear(); // after the loop the program will clear every output or message
-            ConsoleUI.DisplayLogo(); // the ASCII logo will then display
+            ConsoleUI.DisplayLogo(); 
             Console.ForegroundColor = ConsoleColor.Blue;
 
             Console.WriteLine($"Today's date: {DateTime.Now:dd MMMM yyyy}");
