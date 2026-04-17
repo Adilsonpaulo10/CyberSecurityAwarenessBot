@@ -29,3 +29,5 @@ Technologies:
 - C#
 - .NET Console
 - GitHub Actions
+cl screenshot
+<img width="1918" height="955" alt="All 8 commits" src="https://github.com/user-attachments/assets/baa256f5-8b43-440a-bf18-f13f116297ca" />
